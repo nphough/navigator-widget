@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+body {
+  @apply font-sans antialiased bg-gray-50 text-gray-900;
+}
+
+/* Google Places Autocomplete styles to match Navigator */
+gmp-place-autocomplete {
+  width: 100%;
+}
+
+gmp-place-autocomplete input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+}
+
+/* Iframe specific styles */
+.widget-container {
+  @apply min-h-screen bg-white;
+}
+
+/* Loading states */
+.loading-spinner {
+  @apply animate-spin rounded-full h-6 w-6 border-b-2 border-primary-600;
+}
+
+/* AF Badge styles */
+.af-badge {
+  @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.af-badge.alcohol-free {
+  @apply bg-green-100 text-green-800;
+}
+
+.af-badge.has-af-options {
+  @apply bg-amber-100 text-amber-800;
+}
+
+/* Map styles */
+.map-container {
+  @apply w-full h-full rounded-lg overflow-hidden;
+}
+
+/* Filter panel styles */
+.filter-section {
+  @apply space-y-4 p-4 bg-white rounded-lg border border-gray-200;
+}
+
+.filter-label {
+  @apply block text-sm font-medium text-gray-700 mb-2;
+}
+
+/* Responsive utilities */
+@media (max-width: 767px) {
+  .mobile-hidden {
+    @apply hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  .desktop-hidden {
+    @apply hidden;
+  }
+}
